@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* Styles for small screens */
+      @media screen and (max-width: 767px) {
+        /* Move navigation to the next line */
+        .navigation {
+          grid-template-columns: 1fr;
+          grid-row: 2;
+        }
+
+        /* Stack columns vertically */
+        footer {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, auto);
+          grid-row: 3;
+        }
+
+        .column1 {
+          grid-row: 1;
+        }
+
+        .column2 {
+          grid-row: 2;
+        }
+
+        .column3 {
+          grid-row: 3;
+        }
+      }
+
+      /* Styles for all screens */
+      .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        background-color: lightpink;
+      }
+
+      header {
+        background-color: lightblue;
+        display: grid;
+        grid-template-columns: 1fr auto;
+      }
+
+      .navigation {
+        display: grid;
+        grid-template-columns: 1fr auto;
+      }
+
+      .hero {
+        background-color: lightslategray;
+      }
+
+      main {
+        background-color: lightcyan;
+      }
+
+      footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">logo</div>
+        <div class="navigation">
+          <nav>nav...</nav>
+          <div class="toggle">toggle</div>
+        </div>
+      </header>
+
+      <div class="hero">
+        hero
+      </div>
+
+      <main>
+        main...<br />
+        main...<br />
+        main...<br />
+        main...<br />
+      </main>
+
+      <footer>
+        <div class="column1">column1</div>
+        <div class="column2">column2</div>
+        <div class="column3">column3</div>
+      </footer>
+    </div>
+  </body>
+</html>
